@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="test_projFlow" doc:id="cb84d8c5-bccb-43c5-b52a-15a4e6c98e83" >
+		<scheduler doc:name="DAY 1" doc:id="1c391a4b-878d-44d4-af79-c98ecbc95f39" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="1" timeUnit="DAYS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<set-payload value="Hello World" doc:name="Hello World" doc:id="c8b24be9-25b2-427f-8f4c-af8073009810" />
+		<logger level="INFO" doc:name="Logger" doc:id="41e0e004-624f-47f5-bb69-d66273ba540e" message="Payload set to #[payload]"/>
+	</flow>
+</mule>
